@@ -35,7 +35,6 @@ function playGame(player) {
 
         console.log(("CURRENT", $("#currentPlayer").text));
 
-
         if ($("#currentPlayer").text === "Player 1") {
         // if (newPlayer === player1) {
             $("#currentPlayer").text("Player 2");
