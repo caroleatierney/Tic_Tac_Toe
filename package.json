@@ -1,0 +1,24 @@
+{
+  "name": "week-11-jquery_and_ajax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caroleatierney/Week-11-JQuery_and_AJAX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caroleatierney/Week-11-JQuery_and_AJAX/issues"
+  },
+  "homepage": "https://github.com/caroleatierney/Week-11-JQuery_and_AJAX#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.1",
+    "jquery": "^3.7.0",
+    "json-server": "^0.17.3"
+  }
+}
