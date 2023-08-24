@@ -1,9 +1,17 @@
-// const player1='X';
+const player1='X';
 const player2='O';
 
-const img = document.querySelector("img");
-img.src = "./images/Jocie";
-const player1 = img;
+// const imgJ = document.querySelector("img");
+
+// const imgJ = document.querySelector("img");
+// const imgJ = $("#img-r1c1");
+// imgJ.src = "./images/Jocie";
+// const jBetta = imgJ.src
+// const player1 = imgJ;
+
+// const imgC = document.querySelector("img");
+// imgC.src = "./images/Carole";
+// const player2 = imgC;
 
 let winner = false;
 let player = player1;
@@ -15,6 +23,7 @@ $buttons.on("click", (event) => {
     const $clickedButton = $(event.target);
     $clickedButton.prop("disabled", true);
     $clickedButton.text(player);
+    // $clickedButton.text(jBetta);
     let r1c1 = $("#button-r1c1").text();
     let r1c2 = $("#button-r1c2").text();
     let r1c3 = $("#button-r1c3").text();
@@ -74,16 +83,6 @@ function playGame(player,r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3) {
     } else if (r1c1 && r1c2 && r1c3 && r2c1 && r2c2 && r2c3 && r3c1 && r3c2 && r3c3 !== " ") {
         winner = "tie"
     }
-
-    // // display winner or tie
-    // if (winner === "X") {
-    //    return $("#currentPlayer").text("Player 1 Wins!");
-    // } else if (winner === "O") {
-    //     return $("#currentPlayer").text("Player 2 Wins!");
-    // } else if (winner === "tie") {
-    //     return $("#currentPlayer").text("There was a tie!");
-    // }
-
 };
 
 $("#clear").on("click", (event) => {
