@@ -2,8 +2,6 @@ const player1='X';
 const player2='O';
 
 // const imgJ = document.querySelector("img");
-
-// const imgJ = document.querySelector("img");
 // const imgJ = $("#img-r1c1");
 // imgJ.src = "./images/Jocie";
 // const jBetta = imgJ.src
@@ -20,10 +18,23 @@ $("#currentPlayer").text("Player 1");
 
 const $buttons = $(".btn-square-md")
 $buttons.on("click", (event) => {
+    // const imgJ = document.querySelector("#img-r1c1");
+    // const imgJ = $("#img-r1c1");
+    // imgJ.src = "./images/Jocie.png";
     const $clickedButton = $(event.target);
     $clickedButton.prop("disabled", true);
     $clickedButton.text(player);
-    // $clickedButton.text(jBetta);
+    // document.querySelector("#img-r1c1").text(imgJ.src)
+    // $clickedButton.text(imgJ.src);
+
+    // $("#r1c1").replaceWith("<img src='loading.gif'>");
+    // watch video
+
+    // var element = document.getElementById('#r1c1');
+    // element.setAttribute('type', 'image');
+    // element.setAttribute('src', './images/Jocie.png');
+    $("#r1c1").attr("href", "./images/Jocie.png");
+
     let r1c1 = $("#button-r1c1").text();
     let r1c2 = $("#button-r1c2").text();
     let r1c3 = $("#button-r1c3").text();

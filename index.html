@@ -15,61 +15,69 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body style = "background-image: url(./images/dividedTank.png); background-size: cover; background-repeat: no-repeat;" alt="divided tank">
-        <div class="container text-center">
-            <div class="row" style=" color: white;">
-                <div class="col-sm-3">
-                    <h3>Player 1 is 'X'</h3>
+    <body style = "background-image: url(./images/dividedTank.png); background-size: cover; background-repeat: no-repeat; background-position: center;" alt="divided tank">
+        <div class="container">
+            <div class="row" style=" color: white">
+                <div class="col-sm-4" style="border-style: solid; border-color: rgb(28, 214, 189); border-width: 15px; padding:90px; margin: 35px; background-image: url(./images/Jocie.png); background-size: cover; background-repeat: no-repeat; background-position: center; d-flex">
+                    <h1>Jormungar</h1>
                 </div>
-                <div class="col-sm-6">
-                    <h1 id="currentPlayer" class="text-center"></h1>
+                <div class="col-sm-4 align-bottom">
+                    <h1 id="currentPlayer" class="align-content-space-between"></h1>
                 </div>
-                <div class="col-sm-3">
-                    <h3>Player 2 is 'O'</h3>
+                <div class="col-sm-4" style="border-style:solid; border-color: rgb(28, 214, 189); border-width: 15px; padding:90px; margin: 35px; background-image: url(./images/Carole.png); background-size: cover; background-repeat: no-repeat; background-position: center mask text-light d-flex justify-content-center flex-column text-top">
+                    <h1>Malachi</h1>
                 </div>
             </div>
         
             <div class="row">
+
+
+                <!-- <div class="col-sm-4">
+                    <button id="button-r1c1" type="button" class="btn btn-square-md" style="border-style: solid;border-color: rgb(149, 214, 50); border-width: 7.3px; padding:90px; margin: 35px;"font-size:90px"><img id="img-r1c1" class="img-fluid"></button>
+                </div> -->
+
                 <div class="col-sm-4">
-                    <button id="button-r1c1" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img id="img-r1c1" class="img-fluid"></img></button>
+                    <button id="button-r1c1" type="button" class="btn btn-square-md"
+                        style="border-style: solid;border-color: rgb(149, 214, 50); border-width: 7.3px; padding:90px; margin: 35px; font-size:90px"></button>
+                </div>
+
+                <div class="col-sm-4">
+                    <button id="button-r1c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
+                    ; padding:90px; margin: 35px;"></button>
+
                 </div>
                 <div class="col-sm-4">
-                    <button id="button-r1c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img id="img-r1c2" class="img-fluid"</img></button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="button-r1c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
+                    <button id="button-r1c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
                     ; padding:90px; margin: 35px;"><img id="img-r1c3" class="img-fluid"></img></button>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-4">
-                    <button id="button-r2c1" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
+                    <button id="button-r2c1" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
                     ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
                 </div>
                 <div class="col-sm-4">
-                    <button id="button-r2c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
+                    <button id="button-r2c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
                     ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
                 </div>
                 <div class="col-sm-4">
-                    <button id="button-r2c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
+                    <button id="button-r2c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
                     ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-4">
-                    <button id="button-r3c1" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
+                    <button id="button-r3c1" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
                     ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
                 </div>
                 <div class="col-sm-4">
-                    <button id="button-r3c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
+                    <button id="button-r3c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
                     ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
                 </div>
                 <div class="col-sm-4">
-                    <button id="button-r3c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: red; border-width: 7.3px
+                    <button id="button-r3c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
                     ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
                 </div>
             </div>
