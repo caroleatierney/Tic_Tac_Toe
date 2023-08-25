@@ -5,15 +5,77 @@
     height: 100px !important;
     text-align: center;
     padding: 0px;
-    /* font-size: 10px; */
+    font-size: 90px;
 }
 
-/* #image {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+.backImg {
     background-image: url(./images/dividedTank.png);
-    /* background-size: 200px 200px; */
-    height: 100%;
-} */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+.jorm {
+    background-image: url(./images/Jocie.png);
+}
+
+.mal {
+    background-image: url(./images/Carole.png);
+}
+
+.bettaImg {
+    border-style: solid;
+    border-color: #1cd6bd;
+    border-width: 15px;
+    padding:90px;
+    margin: 35px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center mask text-light d-flex justify-content-center flex-column text-top;
+}
+
+.btn-square-md {
+    border-style: solid;
+    border-color: #1cd6bd;
+    border-width: 7.3px;
+    padding:90px;
+    margin: 35px;
+    font-size:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.gameContainer {
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    justify-content: center;
+}
+
+.grid-item {
+    border: 10px solid #1cd6bd;
+    padding: 20px;
+    font-size: 150px;
+    text-align: center;
+    justify-content: center;
+    color:#1cd6bd;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+#clear {
+    background-color:#1cd6bd;
+    justify-content: center;
+}
+
+.alert {
+    color:#1cd6bd;
+}

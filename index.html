@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Tic-Tac-Toe</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
 
@@ -15,73 +15,42 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body style = "background-image: url(./images/dividedTank.png); background-size: cover; background-repeat: no-repeat; background-position: center;" alt="divided tank">
-        <div class="container">
-            <div class="row" style=" color: white">
-                <div class="col-sm-4" style="border-style: solid; border-color: rgb(28, 214, 189); border-width: 15px; padding:90px; margin: 35px; background-image: url(./images/Jocie.png); background-size: cover; background-repeat: no-repeat; background-position: center; d-flex">
+    <body class="backImg">
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <div class="container players">
+            <div class="row; d-flex flex-nowrap" style=" color: white;">
+                <div class="col jorm bettaImg">
                     <h1>Jormungar</h1>
                 </div>
-                <div class="col-sm-4 align-bottom">
+                <div class="col align-bottom">
                     <h1 id="currentPlayer" class="align-content-space-between"></h1>
                 </div>
-                <div class="col-sm-4" style="border-style:solid; border-color: rgb(28, 214, 189); border-width: 15px; padding:90px; margin: 35px; background-image: url(./images/Carole.png); background-size: cover; background-repeat: no-repeat; background-position: center mask text-light d-flex justify-content-center flex-column text-top">
+                <div class="col mal bettaImg">
                     <h1>Malachi</h1>
                 </div>
             </div>
+            <div class="row text-center">
+                <div class="col alert">
+                    <h1 id="winner"></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container text-center">
+            <div id="cell-1" class="grid-item"><img></div>
+            <div id="cell-2" class="grid-item"></div>
+            <div id="cell-3" class="grid-item"></div>
+            <div id="cell-4" class="grid-item"></div>
+            <div id="cell-5" class="grid-item"></div>
+            <div id="cell-6" class="grid-item"></div>
+            <div id="cell-7" class="grid-item"></div>
+            <div id="cell-8" class="grid-item"></div>
+            <div id="cell-9" class="grid-item"></div>
+        </div>
         
-            <div class="row">
-
-
-                <!-- <div class="col-sm-4">
-                    <button id="button-r1c1" type="button" class="btn btn-square-md" style="border-style: solid;border-color: rgb(149, 214, 50); border-width: 7.3px; padding:90px; margin: 35px;"font-size:90px"><img id="img-r1c1" class="img-fluid"></button>
-                </div> -->
-
-                <div class="col-sm-4">
-                    <button id="button-r1c1" type="button" class="btn btn-square-md"
-                        style="border-style: solid;border-color: rgb(149, 214, 50); border-width: 7.3px; padding:90px; margin: 35px; font-size:90px"></button>
-                </div>
-
-                <div class="col-sm-4">
-                    <button id="button-r1c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"></button>
-
-                </div>
-                <div class="col-sm-4">
-                    <button id="button-r1c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img id="img-r1c3" class="img-fluid"></img></button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <button id="button-r2c1" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="button-r2c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="button-r2c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <button id="button-r3c1" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="button-r3c2" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="button-r3c3" type="button" class="btn btn-square-md" style="border-style: solid; border-color: rgb(149, 214, 50); border-width: 7.3px
-                    ; padding:90px; margin: 35px;"><img class="img-fluid"></img></button>
-                </div>
-            </div>
-            
+        <div class="container">
             <div class="row">
                 <div class="col">
                     <button id="clear" type="button" class="btn btn-info">Start Over?</button>

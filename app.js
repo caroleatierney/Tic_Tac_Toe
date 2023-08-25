@@ -1,60 +1,49 @@
 const player1='X';
 const player2='O';
 
-// const imgJ = document.querySelector("img");
-// const imgJ = $("#img-r1c1");
-// imgJ.src = "./images/Jocie";
-// const jBetta = imgJ.src
-// const player1 = imgJ;
-
-// const imgC = document.querySelector("img");
-// imgC.src = "./images/Carole";
-// const player2 = imgC;
-
 let winner = false;
 let player = player1;
 
 $("#currentPlayer").text("Player 1");
 
-const $buttons = $(".btn-square-md")
-$buttons.on("click", (event) => {
-    // const imgJ = document.querySelector("#img-r1c1");
-    // const imgJ = $("#img-r1c1");
-    // imgJ.src = "./images/Jocie.png";
-    const $clickedButton = $(event.target);
-    $clickedButton.prop("disabled", true);
-    $clickedButton.text(player);
-    // document.querySelector("#img-r1c1").text(imgJ.src)
-    // $clickedButton.text(imgJ.src);
+const $cells = $(".grid-item")
+$cells.on("click", (event) => {
+    const $clickedCell = $(event.target);
+
+    $clickedCell.text(player);
+
+    
+
+    // $clickedCell.img.attr("src", "./images/Jocie.png");
 
     // $("#r1c1").replaceWith("<img src='loading.gif'>");
-    // watch video
-
     // var element = document.getElementById('#r1c1');
     // element.setAttribute('type', 'image');
     // element.setAttribute('src', './images/Jocie.png');
-    $("#r1c1").attr("href", "./images/Jocie.png");
+    // $("#r1c1").attr("href", "./images/Jocie.png");
 
-    let r1c1 = $("#button-r1c1").text();
-    let r1c2 = $("#button-r1c2").text();
-    let r1c3 = $("#button-r1c3").text();
-    let r2c1 = $("#button-r2c1").text();
-    let r2c2 = $("#button-r2c2").text();
-    let r2c3 = $("#button-r2c3").text();
-    let r3c1 = $("#button-r3c1").text();
-    let r3c2 = $("#button-r3c2").text();
-    let r3c3 = $("#button-r3c3").text();
+    let r1c1 = $("#cell-1").text();
+    let r1c2 = $("#cell-2").text();
+    let r1c3 = $("#cell-3").text();
+    let r2c1 = $("#cell-4").text();
+    let r2c2 = $("#cell-5").text();
+    let r2c3 = $("#cell-6").text(); 
+    let r3c1 = $("#cell-7").text();
+    let r3c2 = $("#cell-8").text();
+    let r3c3 = $("#cell-9").text();
+
     playGame(player, r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3)
+    
     // display winner or tie
     if (winner === "X") {
-        $("#currentPlayer").text("Player 1 Wins!");
-        $(".btn-square-md").prop("disabled", true);
+        $("#currentPlayer").text("");
+        $("#winner").text("Player 1 Wins!")
     } else if (winner === "O") {
-        $("#currentPlayer").text("Player 2 Wins!");
-        $(".btn-square-md").prop("disabled", true);
+        $("#currentPlayer").text("");
+        $("#winner").text("Player 2 Wins!")
     } else if (winner === "tie") {
-        $("#currentPlayer").text("There was a tie!");
-        $(".btn-square-md").prop("disabled", true);
+        $("#currentPlayer").text("");
+        $("#winner").text("There was a tie!")
     } else if ($("#currentPlayer").text() === "Player 1") {
         $("#currentPlayer").text("Player 2");
         player = player2;
@@ -66,8 +55,24 @@ $buttons.on("click", (event) => {
 
 function playGame(player,r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3) {
 
+const winningCombos = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [1,5,9],
+    [3,5,7],
+    [1,4,7],
+    [2,5,8],
+    [3,6,9]
+]
+
+const gameBoard = [
+    [0,0,0],
+    [0,0,0],
+    [0,0,0]
+]
     // row 1
-    if ((r1c1 !== " ") && (r1c1 === r1c2 && r1c2 === r1c3)) {
+    if ((r1c1 !== "") && (r1c1 === r1c2 && r1c2 === r1c3)) {
         winner = r1c1
     // row 2
     } else if ((r2c1 !== "") && (r2c1 === r2c2 && r2c2 === r2c3)) {
@@ -88,7 +93,7 @@ function playGame(player,r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3) {
     } else if ((r1c1 !== "") && (r1c1 === r2c2 && r2c2 === r3c3)) {
         winner = r1c1
     // diagonal bottom-left top-right
-    } else if ((r3c1 !== "") && (r3c1 === r2c2 && r2c2 === r3c1)) {
+    } else if ((r3c1 !== "") && (r3c1 === r2c2 && r2c2 === r1c3)) {
         winner = r3c1
     // no winner - all spaces played
     } else if (r1c1 && r1c2 && r1c3 && r2c1 && r2c2 && r2c3 && r3c1 && r3c2 && r3c3 !== " ") {
@@ -97,6 +102,9 @@ function playGame(player,r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3) {
 };
 
 $("#clear").on("click", (event) => {
-    $(".btn-square-md").text("");
-    $(".btn-square-md").prop("disabled", false);
+    $(".grid-item").text("");
+    player = player1;
+    $("#currentPlayer").text("Player 1");
+    winner = false;
+    $("#winner").text("")
 });
