@@ -54,7 +54,7 @@ h1, .player {
 }
 
 .grid-item {
-    border: 10px solid #e5ebe5;
+    border: 10px solid #a7521e;
     padding: 20px;
     font-size: 150px;
     text-align: center;
@@ -69,6 +69,8 @@ h1, .player {
 #clear {
     background-color:#1cd6bd;
     justify-content: center;
+    padding: 20px;
+    font-size: 40px;
 }
 
 .alert {
