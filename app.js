@@ -4,18 +4,20 @@ const player2='O';
 let winner = false;
 let player = player1;
 
-$("#currentPlayer").text("Player 1");
+$("#currentPlayer").text("Player 1 Jormunga X");
 
 const $cells = $(".grid-item")
 $cells.on("click", (event) => {
     const $clickedCell = $(event.target);
 
-    $clickedCell.text(player);
-
+    // Only allow cell to update once
+    if ($clickedCell.text() === "") {
+        $clickedCell.text(player);
+    } else {
+        leave; // dont proceed in event logic
+    }
     
-
     // $clickedCell.img.attr("src", "./images/Jocie.png");
-
     // $("#r1c1").replaceWith("<img src='loading.gif'>");
     // var element = document.getElementById('#r1c1');
     // element.setAttribute('type', 'image');
@@ -44,11 +46,11 @@ $cells.on("click", (event) => {
     } else if (winner === "tie") {
         $("#currentPlayer").text("");
         $("#winner").text("There was a tie!")
-    } else if ($("#currentPlayer").text() === "Player 1") {
-        $("#currentPlayer").text("Player 2");
+    } else if ($("#currentPlayer").text() === "Player 1 Jormunga X") {
+        $("#currentPlayer").text("Player 2 Malachi O");
         player = player2;
     } else {
-        $("#currentPlayer").text("Player 1");
+        $("#currentPlayer").text("Player 1 Jormunga X");
         player = player1
     }
 });
@@ -96,7 +98,7 @@ const gameBoard = [
     } else if ((r3c1 !== "") && (r3c1 === r2c2 && r2c2 === r1c3)) {
         winner = r3c1
     // no winner - all spaces played
-    } else if (r1c1 && r1c2 && r1c3 && r2c1 && r2c2 && r2c3 && r3c1 && r3c2 && r3c3 !== " ") {
+    } else if (r1c1 && r1c2 && r1c3 && r2c1 && r2c2 && r2c3 && r3c1 && r3c2 && r3c3 !== "") {
         winner = "tie"
     }
 };
@@ -104,7 +106,7 @@ const gameBoard = [
 $("#clear").on("click", (event) => {
     $(".grid-item").text("");
     player = player1;
-    $("#currentPlayer").text("Player 1");
+    $("#currentPlayer").text("Player 1 Jormunga X");
     winner = false;
     $("#winner").text("")
 });

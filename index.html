@@ -13,22 +13,38 @@
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Sedgwick+Ave+Display&display=swap"
+            rel="stylesheet">
     </head>
 
     <body class="backImg">
-        <section class="title">
-            <h1>Tic Tac Toe</h1>
+        <section class="title d-flex justify-content-center align-items-center">
+            <h1 id="title">Tic Tac Toe between Betta Brothers</h1>
         </section>
+
         <div class="container players">
-            <div class="row; d-flex flex-nowrap" style=" color: white;">
+            <!-- <div class="row; d-flex flex-nowrap">
+                <div class="col-6 player">Player 1</div>
+                <div class="col-6 player">Player 1</div>
+            </div> -->
+            <div class="row; d-flex flex-nowrap">
                 <div class="col jorm bettaImg">
-                    <h1>Jormungar</h1>
+                    <h1>Jormunga</h1>
+                    <!-- <h1>'X'</h1> -->
+                    <!-- <h3>Player 1</h3>
+                    <h3>X</h3> -->
                 </div>
-                <div class="col align-bottom">
-                    <h1 id="currentPlayer" class="align-content-space-between"></h1>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <h1 id="currentPlayer"></h1>
                 </div>
                 <div class="col mal bettaImg">
                     <h1>Malachi</h1>
+                    <!-- <h1>'O'</h1> -->
+                    <!-- <h4>Player 2</h4>
+                    <h4>O</h4> --> -->
                 </div>
             </div>
             <div class="row text-center">
@@ -38,8 +54,8 @@
             </div>
         </div>
 
-        <div class="grid-container text-center">
-            <div id="cell-1" class="grid-item"><img></div>
+        <div class="grid-container">
+            <div id="cell-1" class="grid-item"></div>
             <div id="cell-2" class="grid-item"></div>
             <div id="cell-3" class="grid-item"></div>
             <div id="cell-4" class="grid-item"></div>
@@ -52,7 +68,7 @@
         
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col d-flex justify-content-center align-items-center">
                     <button id="clear" type="button" class="btn btn-info">Start Over?</button>
                 </div>
             </div>

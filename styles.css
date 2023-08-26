@@ -1,11 +1,6 @@
-.btn-square-md {
-    width: 100px !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    height: 100px !important;
-    text-align: center;
-    padding: 0px;
-    font-size: 90px;
+body {
+    font-family: 'Crimson Text', serif;
+    font-family: 'Sedgwick Ave Display', cursive;
 }
 
 .backImg {
@@ -13,6 +8,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    /* color: aliceblue; */
+    /* text-align: center; */
 }
 
 .jorm {
@@ -21,6 +18,16 @@
 
 .mal {
     background-image: url(./images/Carole.png);
+}
+
+#title {
+    font-size: 100px;
+    padding: 50px;
+}
+
+h1, .player {
+    color: white;
+    text-align: center;
 }
 
 .bettaImg {
@@ -32,18 +39,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center mask text-light d-flex justify-content-center flex-column text-top;
-}
-
-.btn-square-md {
-    border-style: solid;
-    border-color: #1cd6bd;
-    border-width: 7.3px;
-    padding:90px;
-    margin: 35px;
-    font-size:90px;
-    display: flex;
-    justify-content: center;
-    align-items: center
 }
 
 .gameContainer {
@@ -59,16 +54,16 @@
 }
 
 .grid-item {
-    border: 10px solid #1cd6bd;
+    border: 10px solid #e5ebe5;
     padding: 20px;
     font-size: 150px;
     text-align: center;
-    justify-content: center;
     color:#1cd6bd;
     height: 300px;
     width: 300px;
     display: flex;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #clear {
