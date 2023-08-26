@@ -11,7 +11,8 @@ $cells.on("click", (event) => {
     const $clickedCell = $(event.target);
 
     // Only allow cell to update once with value X or O
-    if ($clickedCell.text() === "") {
+    // If winner has been determined, do not allow unclaimed cells to be updated
+    if ($clickedCell.text() === "" && winner === false) {
         $clickedCell.text(player);
 
         // Need to work out the kinks to display the image adjusted for sell size with border and X or O over it
@@ -90,7 +91,7 @@ function playGame(player,r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3) {
     // no winner - all spaces played
     } else if (r1c1 && r1c2 && r1c3 && r2c1 && r2c2 && r2c3 && r3c1 && r3c2 && r3c3 !== "") {
         winner = "tie"
-    }
+    } 
 };
 
 // clear game button
