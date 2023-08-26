@@ -25,28 +25,21 @@
             <h1 id="title">Tic Tac Toe between Betta Brothers</h1>
         </section>
 
+        <!--  Container to hold the player images and the current player -->
         <div class="container players">
-            <!-- <div class="row; d-flex flex-nowrap">
-                <div class="col-6 player">Player 1</div>
-                <div class="col-6 player">Player 1</div>
-            </div> -->
             <div class="row; d-flex flex-nowrap">
                 <div class="col jorm bettaImg">
                     <h1>Jormunga</h1>
-                    <!-- <h1>'X'</h1> -->
-                    <!-- <h3>Player 1</h3>
-                    <h3>X</h3> -->
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                     <h1 id="currentPlayer"></h1>
                 </div>
                 <div class="col mal bettaImg">
                     <h1>Malachi</h1>
-                    <!-- <h1>'O'</h1> -->
-                    <!-- <h4>Player 2</h4>
-                    <h4>O</h4> --> -->
                 </div>
             </div>
+
+            <!--  Bootstrap winner alert -->
             <div class="row text-center">
                 <div class="col alert">
                     <h1 id="winner"></h1>
@@ -54,6 +47,7 @@
             </div>
         </div>
 
+        <!--  CSS Grid to hold the game values -->
         <div class="grid-container">
             <div id="cell-1" class="grid-item"></div>
             <div id="cell-2" class="grid-item"></div>
@@ -65,7 +59,8 @@
             <div id="cell-8" class="grid-item"></div>
             <div id="cell-9" class="grid-item"></div>
         </div>
-        
+
+        <!--  Container to hold the start over button -->
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-center align-items-center">

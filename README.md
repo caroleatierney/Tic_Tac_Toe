@@ -8,9 +8,24 @@
 - A button should be available to clear the grid and restart the game.
 - When a player has won, or the board is full and the game results in a draw, a Bootstrap alert or similar - Bootstrap component should appear across the screen announcing the winner.
 
+### MVP is done, but would like to add the fish images to the cell with the X or O overlaying it
 
-<img id="img-r1c3" class="img-fluid">
+### Need to practice CSS grid update logic
 
-<!-- <div class="col-sm-4">
-    <button id="button-r1c1" type="button" class="btn btn-square-md" style="border-style: solid;border-color: rgb(149, 214, 50); border-width: 7.3px; padding:90px; margin: 35px;"font-size:90px"><img id="img-r1c1" class="img-fluid"></button>
-</div> -->
+Something like this...
+const winningCombos = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [1,5,9],
+    [3,5,7],
+    [1,4,7],
+    [2,5,8],
+    [3,6,9]
+]
+
+const gameBoard = [
+    [0,0,0],
+    [0,0,0],
+    [0,0,0]
+]

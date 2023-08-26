@@ -10,20 +10,23 @@ const $cells = $(".grid-item")
 $cells.on("click", (event) => {
     const $clickedCell = $(event.target);
 
-    // Only allow cell to update once
+    // Only allow cell to update once with value X or O
     if ($clickedCell.text() === "") {
         $clickedCell.text(player);
+
+        // Need to work out the kinks to display the image adjusted for sell size with border and X or O over it
+        // this is at least putting the image there - Note cell one id is naturally 0
+        // const img = document.createElement('img');
+        // let cellId = $clickedCell.index();
+        // console.log("cell id", cellId)
+        // img.src = "./images/Carole.png";
+        // $("#cell-1").append(img);
+
     } else {
         leave; // dont proceed in event logic
     }
-    
-    // $clickedCell.img.attr("src", "./images/Jocie.png");
-    // $("#r1c1").replaceWith("<img src='loading.gif'>");
-    // var element = document.getElementById('#r1c1');
-    // element.setAttribute('type', 'image');
-    // element.setAttribute('src', './images/Jocie.png');
-    // $("#r1c1").attr("href", "./images/Jocie.png");
 
+    // each time someone plays, set the variables for the clucnky if statement compare
     let r1c1 = $("#cell-1").text();
     let r1c2 = $("#cell-2").text();
     let r1c3 = $("#cell-3").text();
@@ -36,16 +39,18 @@ $cells.on("click", (event) => {
 
     playGame(player, r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3)
     
-    // display winner or tie
+    // display winner
     if (winner === "X") {
         $("#currentPlayer").text("");
         $("#winner").text("Player 1 Wins!")
     } else if (winner === "O") {
         $("#currentPlayer").text("");
         $("#winner").text("Player 2 Wins!")
+    // display tie
     } else if (winner === "tie") {
         $("#currentPlayer").text("");
         $("#winner").text("There was a tie!")
+    // switch current player
     } else if ($("#currentPlayer").text() === "Player 1 Jormunga X") {
         $("#currentPlayer").text("Player 2 Malachi O");
         player = player2;
@@ -56,23 +61,8 @@ $cells.on("click", (event) => {
 });
 
 function playGame(player,r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3) {
+    // Clunky if statements until I can figure out grid logic
 
-const winningCombos = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9],
-    [1,5,9],
-    [3,5,7],
-    [1,4,7],
-    [2,5,8],
-    [3,6,9]
-]
-
-const gameBoard = [
-    [0,0,0],
-    [0,0,0],
-    [0,0,0]
-]
     // row 1
     if ((r1c1 !== "") && (r1c1 === r1c2 && r1c2 === r1c3)) {
         winner = r1c1
@@ -103,6 +93,7 @@ const gameBoard = [
     }
 };
 
+// clear game button
 $("#clear").on("click", (event) => {
     $(".grid-item").text("");
     player = player1;
