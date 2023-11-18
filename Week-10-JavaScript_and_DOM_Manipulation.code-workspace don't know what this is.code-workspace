@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../Week-10-JavaScript_and_DOM_Manipulation"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

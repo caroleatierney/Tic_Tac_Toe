@@ -1,0 +1,85 @@
+// $("button-r1c1").hide();
+
+// can you just use button for class?
+const player1='X';
+const player2='O';
+let winner = false;
+
+var player = player1;
+$("#currentPlayer").text("Player 1");
+
+playGame(player);
+
+// the winner is
+// or tie
+
+function playGame(player) {
+
+    const $h1s = $("h1")
+    $h1s.on("click", (event) => {
+
+        const $clickedH1 = $(event.target);
+        // $clickedH1.prop("disabled", true);
+        $clickedH1.text(player);
+        $clickedH1.css("pointer-events", "none");
+
+        if ($("#currentPlayer").text() === "Player 1") {
+            player = player2
+            $("#currentPlayer").text("Player 2");
+        } else {
+            $("#currentPlayer").text("Player 1");
+            player = player1
+        }
+
+        // tie logic?
+        // alert time delay
+
+        if (($("#r1c1").text() !== " " && $("#r1c2").text !== " " && $("#r1c2").text !== " ") && ($("#r1c1").text() === $("#r1c2").text() && $("#r1c2").text() === $("#r1c3").text())) {
+            if ($("#r1c1").text() === "X") {
+                alert("Player 1 Wins!")
+            } else {
+                alert("Player 2 Wins!")
+            }
+        }
+    });
+};
+
+$("#clear").on("click", (event) => {
+    $("h1").text("");
+    $("#r1c1").css("pointer-events", " ");
+});
+
+        // movesObj.gridLoc = $clickedH1.attr('id');
+        // movesObj.moveVal = player;
+        // gameArray.push(movesObj)
+
+// let movesObj =
+// {
+//     gridLoc: '',
+//     moveVal: ''
+// }
+
+// let gameArray = []
+
+
+        // isThereAWinner(gameArray)
+
+
+        // console.log(gameArray.indexOf(movesObj.gridLoc'r1c1'));
+
+        // if (gameArray.indexOf)
+
+        // gameArray.forEach(move => {
+
+// Create the array of winners
+    // movesObj.gridLoc = $clickedH1.attr('id');
+
+    
+    // if ($("#button-r1c1") === $("#button-r1c2") === $("#button-r1c3")) {
+    //     //  "(winner === true) {
+    //     // return winner = false;
+    //     alert("the winner is")
+    //     return winner
+    // } else {
+    //     return newPlayer = (player === player1) ? player2 : player1;
+    // }
